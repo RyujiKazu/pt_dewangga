@@ -14,6 +14,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://dewanggaproperty.online'),
   title: 'PT. Dewangga Putra Utama | Real Estate & Perumahan',
   description:
     'PT. Dewangga Putra Utama merupakan perusahaan yang bergerak di bidang real estate dan pengembangan perumahan berkualitas.',
@@ -24,6 +25,9 @@ export const metadata: Metadata = {
     'property developer',
     'hunian berkualitas',
   ],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'PT. Dewangga Putra Utama | Real Estate & Perumahan',
     description:
@@ -43,7 +47,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'PT. Dewangga Putra Utama | Real Estate & Perumahan',
-    description: 'Hunian berkualitas untuk kenyamanan hari ini dan nilai investasi masa depan.',
+    description:
+      'Hunian berkualitas untuk kenyamanan hari ini dan nilai investasi masa depan.',
     images: ['/og.png'],
   },
   robots: { index: true, follow: true },
@@ -52,7 +57,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="id" className="scroll-smooth">
       <body className={`${manrope.variable} ${cormorant.variable} antialiased`}>
