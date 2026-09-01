@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import {
+  companyInfo,
+  createWhatsAppUrl,
+  defaultWhatsAppMessage,
+} from '@/data/company';
 
 const links = [
   ['Home', '#home'],
@@ -15,31 +20,76 @@ export function Footer() {
       <div className="section-shell grid gap-12 py-16 sm:py-20 md:grid-cols-2 lg:grid-cols-[1.35fr_0.65fr_0.9fr] lg:gap-16">
         <div>
           <div className="w-fit bg-white p-2.5">
-            <Image src="/images/logo-dpu.jpg" alt="Logo resmi PT. Dewangga Putra Utama" width={1254} height={1254} className="size-24 object-contain sm:size-28" />
+            <Image
+              src="/images/logo-dpu.jpg"
+              alt="Logo resmi PT. Dewangga Putra Utama"
+              width={1254}
+              height={1254}
+              className="size-24 object-contain sm:size-28"
+            />
           </div>
-          <p className="mt-6 max-w-md text-sm leading-7 text-white/62">Perusahaan real estate dan pengembangan perumahan yang berkomitmen menciptakan hunian berkualitas, nyaman, dan bernilai jangka panjang.</p>
-          <div className="mt-6 flex gap-3">
-            <Link href="#" aria-label="Instagram PT. Dewangga Putra Utama (placeholder)" className="grid size-10 place-items-center border border-white/20 text-[0.65rem] font-bold text-white/70 transition-colors hover:border-gold hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold">IG</Link>
-            <Link href="#" aria-label="LinkedIn PT. Dewangga Putra Utama (placeholder)" className="grid size-10 place-items-center border border-white/20 text-[0.65rem] font-bold text-white/70 transition-colors hover:border-gold hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold">IN</Link>
-          </div>
+          <p className="mt-6 max-w-md text-sm leading-7 text-white/62">
+            Perusahaan real estate dan pengembangan perumahan yang berkomitmen
+            menciptakan hunian berkualitas, nyaman, dan bernilai jangka panjang.
+          </p>
         </div>
         <div>
-          <h2 className="text-xs font-bold tracking-[0.18em] text-gold-light uppercase">Quick Links</h2>
+          <h2 className="text-xs font-bold tracking-[0.18em] text-gold-light uppercase">
+            Quick Links
+          </h2>
           <div className="mt-6 flex flex-col gap-3">
             {links.map(([label, href]) => (
-              <Link key={href} href={href} className="group flex items-center justify-between border-b border-white/10 py-2 text-sm text-white/68 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-gold">
+              <Link
+                key={href}
+                href={href}
+                className="group flex items-center justify-between border-b border-white/10 py-2 text-sm text-white/68 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-gold"
+              >
                 {label}
-                <ArrowUpRight aria-hidden="true" className="size-3.5 text-gold opacity-0 transition-opacity group-hover:opacity-100" />
+                <ArrowUpRight
+                  aria-hidden="true"
+                  className="size-3.5 text-gold opacity-0 transition-opacity group-hover:opacity-100"
+                />
               </Link>
             ))}
           </div>
         </div>
         <div>
-          <h2 className="text-xs font-bold tracking-[0.18em] text-gold-light uppercase">Informasi Kontak</h2>
+          <h2 className="text-xs font-bold tracking-[0.18em] text-gold-light uppercase">
+            Informasi Kontak
+          </h2>
           <div className="mt-6 space-y-5 text-sm leading-6 text-white/62">
-            <p>Alamat kantor resmi perusahaan<br /><span className="text-[0.63rem] tracking-[0.1em] text-white/35 uppercase">Placeholder</span></p>
-            <p>+62 xxx xxxx xxxx<br />info@perusahaan.co.id</p>
-            <p>Senin–Jumat<br />08.00–17.00 WIB</p>
+            <a
+              href={companyInfo.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-gold"
+            >
+              {companyInfo.address}
+            </a>
+            <p>
+              <a
+                href={companyInfo.phoneHref}
+                className="transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-gold"
+              >
+                Telepon: {companyInfo.phoneDisplay}
+              </a>
+              <br />
+              <a
+                href={createWhatsAppUrl(defaultWhatsAppMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-gold"
+              >
+                WhatsApp: {companyInfo.whatsappDisplay}
+              </a>
+            </p>
+            <div>
+              {companyInfo.operatingHours.map(({ days, hours }) => (
+                <p key={days}>
+                  {days}: {hours}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
