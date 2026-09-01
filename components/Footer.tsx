@@ -1,4 +1,4 @@
-import Image from 'next/image';
+/* oxlint-disable next/no-img-element */
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import {
@@ -20,7 +20,7 @@ export function Footer() {
       <div className="section-shell grid gap-12 py-16 sm:py-20 md:grid-cols-2 lg:grid-cols-[1.35fr_0.65fr_0.9fr] lg:gap-16">
         <div>
           <div className="w-fit bg-white p-2.5">
-            <Image
+            <img
               src="/images/logo-dpu.jpg"
               alt="Logo resmi PT. Dewangga Putra Utama"
               width={1254}

@@ -1,6 +1,6 @@
 'use client';
+/* oxlint-disable next/no-img-element */
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
@@ -34,12 +34,11 @@ export function Navbar() {
           aria-label="PT. Dewangga Putra Utama - beranda"
           className="shrink-0 rounded-sm bg-white px-2.5 py-1.5 shadow-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
         >
-          <Image
+          <img
             src="/images/logo-dpu.jpg"
             alt="Logo resmi PT. Dewangga Putra Utama"
             width={1254}
             height={1254}
-            priority
             className="h-14 w-14 object-contain lg:h-16 lg:w-16"
           />
         </Link>
@@ -77,7 +76,7 @@ export function Navbar() {
           >
             <SheetHeader className="border-b border-white/10 px-6 py-6">
               <div className="mb-3 w-fit bg-white p-2">
-                <Image
+                <img
                   src="/images/logo-dpu.jpg"
                   alt="Logo PT. Dewangga Putra Utama"
                   width={1254}
