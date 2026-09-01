@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowDownRight, ArrowRight } from 'lucide-react';
+import { ArrowDownRight } from 'lucide-react';
 
 const heroImage =
   'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=88';
@@ -38,23 +38,16 @@ export function HeroSection() {
           >
             Membangun Hunian,
             <br />
-            <span className="italic text-gold-light">Menciptakan Masa Depan.</span>
+            <span className="italic text-gold-light">
+              Menciptakan Masa Depan.
+            </span>
           </h1>
           <p className="mt-7 max-w-2xl text-sm leading-7 text-white/74 sm:text-base sm:leading-8">
-            PT. Dewangga Putra Utama menghadirkan hunian berkualitas yang memadukan
-            kenyamanan, lokasi strategis, desain modern, dan nilai investasi jangka panjang.
+            PT. Dewangga Putra Utama menghadirkan hunian berkualitas yang
+            memadukan kenyamanan, lokasi strategis, desain modern, dan nilai
+            investasi jangka panjang.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Link
-              href="#proyek"
-              className="group inline-flex min-h-13 items-center justify-between gap-8 bg-gold px-6 text-xs font-bold tracking-[0.16em] text-navy-deep uppercase transition-colors hover:bg-gold-light focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-            >
-              Lihat Proyek
-              <ArrowRight
-                aria-hidden="true"
-                className="size-4 transition-transform group-hover:translate-x-1"
-              />
-            </Link>
             <Link
               href="#kontak"
               className="group inline-flex min-h-13 items-center justify-between gap-8 border border-white/45 bg-white/5 px-6 text-xs font-bold tracking-[0.16em] text-white uppercase backdrop-blur-sm transition-colors hover:border-white hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"

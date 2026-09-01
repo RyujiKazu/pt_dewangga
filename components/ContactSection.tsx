@@ -51,7 +51,7 @@ export function ContactSection() {
               <SectionHeader
                 eyebrow="Hubungi Kami"
                 title="Temukan Hunian yang Tepat Bersama Kami"
-                description="Tim PT. Dewangga Putra Utama siap membantu Anda mengenal proyek, pilihan unit, dan peluang investasi yang sesuai kebutuhan."
+                description="Tim PT. Dewangga Putra Utama siap membantu Anda mendapatkan informasi perusahaan dan konsultasi sesuai kebutuhan."
               />
             </div>
             <div className="mt-10 divide-y divide-slate-300 border-y border-slate-300">

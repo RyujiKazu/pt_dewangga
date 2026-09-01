@@ -10,7 +10,6 @@ import {
 const links = [
   ['Home', '#home'],
   ['Tentang Kami', '#tentang'],
-  ['Proyek', '#proyek'],
   ['Kontak', '#kontak'],
 ];
 

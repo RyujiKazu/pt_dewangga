@@ -16,7 +16,6 @@ import {
 const navigation = [
   { label: 'Home', href: '#home' },
   { label: 'Tentang Kami', href: '#tentang' },
-  { label: 'Proyek', href: '#proyek' },
   { label: 'Kontak', href: '#kontak' },
 ];
 
